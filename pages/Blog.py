@@ -47,7 +47,7 @@ def readingTime(mytext):
 
 
 # Load English tokenizer, tagger, parser, NER, and word vectors
-nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("venv/Lib/site-packages/en_core_web_sm")
 
 
 def analyze_text(text):
