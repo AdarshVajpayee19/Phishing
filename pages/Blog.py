@@ -3,18 +3,20 @@ import sqlite3
 import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
+import spacy
 import streamlit as st
 # import nlp as nlp
 from wordcloud import WordCloud
 from streamlit_option_menu import option_menu
 # from wordcloud import WordCloud
 
-import spacy
+# import spacy
 # from wordcloud import WordCloud
 
 import hashlib
-
-
+import subprocess
+# Download SpaCy model if not already downloaded
+subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
 st.markdown(
     """
     <style>
