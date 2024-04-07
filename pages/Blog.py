@@ -3,7 +3,7 @@ import sqlite3
 import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
-import spacy
+# import spacy
 import streamlit as st
 # import nlp as nlp
 from wordcloud import WordCloud
@@ -14,9 +14,9 @@ from streamlit_option_menu import option_menu
 # from wordcloud import WordCloud
 
 import hashlib
-import subprocess
-# Download SpaCy model if not already downloaded
-subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+# import subprocess
+# # Download SpaCy model if not already downloaded
+# subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
 st.markdown(
     """
     <style>
@@ -47,12 +47,12 @@ def readingTime(mytext):
 
 
 # Load English tokenizer, tagger, parser, NER, and word vectors
-nlp = spacy.load("venv/Lib/site-packages/en_core_web_sm")
+# nlp = spacy.load("en_core_web_sm")
 
 
-def analyze_text(text):
-    doc = nlp(text)
-    return doc
+# def analyze_text(text):
+#     doc = nlp(text)
+#     return doc
 
 
 # Now you can use analyze_text function to perform NLP tasks on your text data
