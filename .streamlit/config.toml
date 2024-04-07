@@ -1,10 +1,10 @@
 [server]
 enableStaticServing = true
 
+[deprecation]
+showPyplotGlobalUse = false
+
 [theme]
 base="light"
 primaryColor="#bf1a1a"
-secondaryBackgroundColor="#ead9af"
-
-[deprecation]
-showPyplotGlobalUse = false
+secondaryBackgroundColor="#e4dd86"

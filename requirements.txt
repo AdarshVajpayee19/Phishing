@@ -12,3 +12,5 @@ nlp==0.4.0
 wordcloud==1.9.3
 Pillow==8.3.2
 scikit-learn==1.2.2
+streamlit-option-menu == 0.3.12
+fontawesome-free == 5.15.4

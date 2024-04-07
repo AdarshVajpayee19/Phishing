@@ -1,6 +1,20 @@
 import streamlit as st
 
-def phishing_quiz():
+
+st.markdown(
+    """
+    <style>
+    .css-wjbhl0.e1fqkh3o9 {
+        display: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+def show():
+    # Display the quiz
+    st.markdown("<h1 style='color:#4d6cc1'>Phishing Quiz</h1>", unsafe_allow_html=True)
+
     # Quiz questions and answers
     questions = [
         "What is phishing?",
@@ -32,6 +46,8 @@ def phishing_quiz():
 
     # Display quiz questions and collect user answers
     score = 0
+    # st.markdown("<h1 style='color:#4d6cc1'>Phishing Quiz</h1>", unsafe_allow_html=True)
+
     for i in range(len(questions)):
         st.markdown("<hr>", unsafe_allow_html=True)
         st.subheader(f"Question {i+1}: {questions[i]}")
@@ -45,7 +61,8 @@ def phishing_quiz():
     if st.button("Submit"):
         # Display the user's score
         st.markdown("<hr>", unsafe_allow_html=True)
-        st.subheader("Quiz Result:")
+        st.markdown("<h4 style='color:#4d6cc1'>Quiz Results</h4>", unsafe_allow_html=True)
+
         st.write(f"Your score: {score} out of {len(questions)}")
 
         # Display personalized feedback based on score
@@ -59,9 +76,8 @@ def phishing_quiz():
             st.write("* [Stay Safe Online](https://staysafeonline.org/)")
             st.markdown("<hr>", unsafe_allow_html=True)
 
-# Display the quiz
-st.title("Phishing Quiz")
-phishing_quiz()
+
+
 
 
 
