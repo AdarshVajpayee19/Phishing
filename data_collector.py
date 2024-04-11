@@ -11,7 +11,7 @@ import feature_extraction as fe
 disable_warnings(InsecureRequestWarning)
 
 # Step 1: csv to dataframe
-URL_file_name = "verified_online_2.csv"
+URL_file_name = "verified_online.csv"
 data_frame = pd.read_csv(URL_file_name)
 
 # retrieve only "url" column and convert it to a list
@@ -35,6 +35,7 @@ def create_structured_data(url_list):
             response = re.get(url_list[i], verify=False, timeout=4)
             if response.status_code != 200:
                 print(i, ". HTTP connection was not successful for the URL: ", url_list[i])
+                print(url_list[i])
             else:
                 soup = BeautifulSoup(response.content, "html.parser")
                 vector = fe.create_vector(soup)
